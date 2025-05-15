@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Portfolio - Studente 5° Superiore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Il Mio Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Chi Sono</a></li>
+                    <li><a href="#projects">Progetti</a></li>
+                    <li><a href="#final-project">Progetto Finale</a></li>
+                    <li><a href="#experience">Esperienze</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Benvenuti nel mio portfolio</h2>
+                <p>Studente del quinto anno - Esame di Stato 2024/2025</p>
+                <a href="#about" class="btn">Scopri di più</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Chi Sono</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="assets/img/profile.jpg" alt="La mia foto">
+                </div>
+                <div class="about-text">
+                    <p>Ciao! Sono uno studente del quinto anno dell'Istituto Della Corte Vanvitelli. Appassionato di elettronica e programmazione.</p>
+                    <p>Durante il mio percorso scolastico ho sviluppato diverse competenze ho realizzato vari progetti che dimostrano il mio impegno e la mia crescita.</p>
+                    <p>Nel tempo libero mi piace giocare a softair e praticare tiro con l'arco. Sono anche classificato terzo in Italia nella classifica outdoor
+                        di tiro con l'arco, e secondo nella classifica indoor.
+                    </p>
+                    <a href="assets/docs/curriculum.pdf" class="btn" download>Scarica il mio CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Progetti Scolastici</h2>
+            <p>Ecco alcuni dei progetti che ho realizzato durante l'anno scolastico:</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/img/Sii_saggio_guida_sicuro.jpeg" alt="Sii Saggio, guida sicuro">
+                    <h3>Progetto: Sii saggio, guida sicuro</h3>
+                    <p>
+                        Il progetto utilizza l'intelligenza artificiale per prevedere le aree a maggior rischio di incidenti 
+                        stradali a Cava de' Tirreni, basandosi su dati storici della polizia municipale. 
+                        Una rete neurale analizza variabili come condizioni meteo, tipo di strada e orari, generando coordinate predette. 
+                        Le mappe interattive (Folium) e il servizio OSRM correggono le imprecisioni, visualizzando gli incidenti reali e predetti.
+                    </p>
+                    <a href="assets/docs/sii_saggio_guida_sicuro.pdf" class="btn" download>Scarica documentazione</a>
+                </div>
+                
+                <div class="project-card">
+                    <img src="assets/img/rover.jpeg" alt="Progetto roover">
+                    <h3>Progetto: Roover</h3>
+                    <p>
+                        Progetto di robotica educativa basato su Arduino Uno, che realizza un rover controllabile via Bluetooth. 
+                        Dotato di sensori (RFID, ultrasuoni, luce), attuatori (motori, LED, buzzer) e display LCD, 
+                        il rover combina automazione e sicurezza (autenticazione RFID). Sviluppato in team da classi quarte e quinte, 
+                        dimostra competenze in elettronica, e programmazione. L'app mobile personalizzata permette il controllo remoto.
+                    </p>
+                    <a href="assets/docs/roover.pdf" class="btn" download>Scarica documentazione</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+<section id="final-project" class="section highlight">
+    <div class="container">
+        <h2>Progetto di Fine Anno</h2>
+        <div class="project-content">
+            <div class="project-img">
+                <img src="assets/img/ecms-dashboard.png" alt="Dashboard ECMS">
+            </div>
+            <div class="project-text">
+                <h3>Energy Consumption Monitoring System (ECMS)</h3>
+                <p>Un sistema IoT innovativo per il monitoraggio intelligente dei consumi energetici domestici:</p>
+                
+                <ul>
+                    <li><strong>Ispirazione:</strong> Creare una soluzione accessibile per ottimizzare i consumi energetici domestici, riducendo sprechi e costi</li>
+                    
+                    <li><strong>Tecnologie chiave:</strong>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-microchip"></i> ESP8266 per acquisizione dati</li>
+                            <li><i class="fas fa-database"></i> MySQL su Aiven per storage</li>
+                            <li><i class="fas fa-chart-line"></i> Grafana per visualizzazione</li>
+                            <li><i class="fas fa-robot"></i> MQTT per comunicazione</li>
+                            <li><i class="fas fa-cube"></i> Case stampato in 3D</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>Sfide principali:</strong>
+                        <ul>
+                            <li>Sincronizzazione temporale precisa tra dispositivi</li>
+                            <li>Gestione sicura di dati sensibili</li>
+                            <li>Ottimizzazione trasmissione dati via UDP</li>
+                            <li>Protezione circuiti ad alta tensione</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>Innovazioni:</strong>
+                        <ul>
+                            <li>Configurazione WiFi semplificata via Access Point</li>
+                            <li>Rilevamento automatico del server via mDNS</li>
+                            <li>Sistema di alert per picchi di consumo</li>
+                            <li>Architettura scalabile per multi-utente</li>
+                        </ul>
+                    </li>
+                    
+                    <li><strong>Risultati:</strong> Sistema funzionante in grado di monitorare in tempo reale 6+ dispositivi con precisione del 95%</li>
+                </ul>
+                
+                <div class="project-links">
+                    <a href="assets/docs/progetto_ECMS.docx" class="btn" download>
+                        <i class="fas fa-file-pdf"></i> Documentazione completa
+                    </a>
+                    <a href="https://github.com/christianostoni/E.C.M.S" class="btn github-btn" target="_blank">
+                        <i class="fab fa-github"></i> Codice sorgente
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <<section id="experience" class="section">
+    <div class="container">
+        <h2>Esperienze Professionali</h2>
+        
+        <div class="timeline">
+            <!-- Minervas -->
+            <div class="timeline-item">
+                <div class="timeline-date">Lug 2024 - Presente</div>
+                <div class="timeline-content">
+                    <h3>Sviluppatore Software - Minervas</h3>
+                    <div class="job-location">Fisciano, Italia</div>
+                    <ul class="job-description">
+                        <li>
+                            <i class="fas fa-network-wired"></i>
+                            <strong>Protocolli automotive:</strong> Sviluppo soluzioni basate su OBD2, CAN Bus e J1939 per veicoli industriali
+                        </li>
+                        <li>
+                            <i class="fas fa-robot"></i>
+                            <strong>IoT e MQTT:</strong> Implementazione sistemi di comunicazione asincroni con Python e multithreading
+                        </li>
+                        <li>
+                            <i class="fas fa-route"></i>
+                            <strong>Ottimizzazione rotte:</strong> Analisi percorsi flotte con OSRM (Open Source Routing Machine)
+                        </li>
+                        <li>
+                            <i class="fas fa-gas-pump"></i>
+                            <strong>Data analysis:</strong> Elaborazione dati telemetrici per migliorare efficienza carburante
+                        </li>
+                    </ul>
+                    <div class="tech-used">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">OBD2</span>
+                        <span class="tech-tag">CAN Bus</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Elettronica Pierri -->
+            <div class="timeline-item">
+                <div class="timeline-date">Apr 2024 - Giu 2024</div>
+                <div class="timeline-content">
+                    <h3>Programmatore PLC - Elettronica Pierri</h3>
+                    <div class="job-location">Fisciano, Italia</div>
+                    <ul class="job-description">
+                        <li>
+                            <i class="fas fa-industry"></i>
+                            <strong>Automazione industriale:</strong> Programmazione PLC Siemens (LOGO! e S7-1200) per linee di produzione
+                        </li>
+                        <li>
+                            <i class="fas fa-jar"></i>
+                            <strong>Sterilizzazione alimenti:</strong> Sviluppo logiche di controllo per sterilizzatore da 3kg (barattoli pomodoro)
+                        </li>
+                        <li>
+                            <i class="fas fa-tank-water"></i>
+                            <strong>Sistemi continui:</strong> Progettazione automazione per serbatoi di lavorazione
+                        </li>
+                    </ul>
+                    <div class="tech-used">
+                        <span class="tech-tag">TIA Portal</span>
+                        <span class="tech-tag">Ladder Logic</span>
+                        <span class="tech-tag">S7-1200</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Anima-Time -->
+            <div class="timeline-item">
+                <div class="timeline-date">Lug 2023 - Ago 2023</div>
+                <div class="timeline-content">
+                    <h3>Istruttore di Tiro con l'Arco - Anima-Time</h3>
+                    <div class="job-location">Calabria, Italia</div>
+                    <ul class="job-description">
+                        <li>
+                            <i class="fas fa-bullseye"></i>
+                            <strong>Addestramento:</strong> Lezioni di tiro con l'arco per turisti di tutte le età
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <strong>Sicurezza:</strong> Gestione protocolli sicurezza e manutenzione attrezzature
+                        </li>
+                        <li>
+                            <i class="fas fa-glass-cheers"></i>
+                            <strong>Intrattenimento:</strong> Organizzazione attività ricreative in villaggio turistico
+                        </li>
+                    </ul>
+                    <div class="skills-used">
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Comunicazione</span>
+                        <span class="skill-tag">Gestione gruppi</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SETIS SAS -->
+            <div class="timeline-item">
+                <div class="timeline-date">Giu 2023</div>
+                <div class="timeline-content">
+                    <h3>Installatore Fotovoltaico - SETIS SAS</h3>
+                    <div class="job-location">Castel San Giorgio, Italia</div>
+                    <ul class="job-description">
+                        <li>
+                            <i class="fas fa-solar-panel"></i>
+                            <strong>Impianti solari:</strong> Installazione e manutenzione sistemi fotovoltaici
+                        </li>
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <strong>Elettrotecnica:</strong> Apprendimento basi impiantistica elettrica
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="contact" class="section">
+    <div class="container">
+        <h2>Contatti</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> christianoston182@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +39 342 144 2116</p>
+                <div class="social-links">
+                    <a href="https://github.com/christianostoni" class="github" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/christian_ostoni?igsh=OGYwY2p3c3BoMDhn" class="instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Il tuo messaggio" required></textarea>
+                <button type="submit" class="btn">Invia</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Il Mio Portfolio. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+</body>
+</html> 
