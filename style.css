@@ -626,5 +626,35 @@ footer {
     .timeline-item::after {
         left: 21px !important;
     }
+
+    /* Aggiungi queste regole a style.css */
+
+/* Pulsante presentazione */
+.btn.presentation-btn {
+    background-color: #00C4CC;
+}
+
+.btn.presentation-btn:hover {
+    background-color: #008a8f;
+}
+
+/* Icona presentazione */
+.fa-presentation-screen:before {
+    content: "\f685";
+}
+
+/* Layout responsive per i pulsanti del progetto */
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.project-links .btn {
+    flex: 1 1 auto;
+    min-width: 200px;
+    text-align: center;
+}
     
 }
