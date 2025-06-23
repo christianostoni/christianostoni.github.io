@@ -656,5 +656,52 @@ footer {
     min-width: 200px;
     text-align: center;
 }
-    
+
+}
+
+/* ECMS Video - Stessa dimensione esatta dell'immagine */
+.project-video {
+    margin: 25px 0;
+}
+
+.project-video h4 {
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #000; /* Sfondo nero per eventuali bordi */
+}
+
+/* Dimensioni fisse uguali all'immagine */
+.video-wrapper,
+.ecms-demo {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Altezza fissa come l'immagine */
+    object-fit: cover; /* Mantiene le proporzioni */
+}
+
+/* Controlli video personalizzati */
+.ecms-demo::-webkit-media-controls {
+    background: rgba(0,0,0,0.3);
+    border-radius: 0 0 8px 8px;
+}
+
+/* Velocità aumentata */
+.ecms-demo {
+    playbackRate: 1.25;
+}
+
+@media (max-width: 768px) {
+    .video-wrapper,
+    .ecms-demo {
+        max-height: 250px; /* Più piccolo su mobile */
+    }
 }
