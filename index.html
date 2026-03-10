@@ -1,276 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-    
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - 5th Year Student</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Christian Ostoni - iOS Developer</title>
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h1>My Portfolio</h1>
+            <a href="index.html" class="logo">Christian Ostoni</a>
             <nav>
                 <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#final-project">Final Project</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="apps/index.html">Apps</a></li>
+                    <li><a href="projects/index.html">Projects</a></li>
+                    <li><a href="experience/index.html">Experience</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h2>Welcome to my portfolio</h2>
-                <p>5th year student - State Exam 2024/2025</p>
-                <a href="#about" class="btn">Learn More</a>
+    <main>
+        <section class="hero">
+            <h1><span class="text-gradient">Designing code.</span><br>Building experiences.</h1>
+            <p>I'm Christian Ostoni, an iOS Developer & Software Engineer passionate about creating intuitive,
+                high-performance applications and connected systems.</p>
+            <div class="hero-cta">
+                <a href="apps/index.html" class="btn btn-accent"><i class="fab fa-apple"></i> View iOS Apps</a>
+                <a href="assets/docs/curriculum.pdf" class="btn btn-secondary" download><i
+                        class="fas fa-arrow-down"></i> Resume</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="assets/img/profile.jpg" alt="My photo">
-                </div>
-                <div class="about-text">
-                    <p>Hello! I'm a 5th year student at Istituto Della Corte Vanvitelli. Passionate about electronics and programming.</p>
-                    <p>During my academic journey I've developed various skills and completed several projects that demonstrate my commitment and growth.</p>
-                    <p>In my free time I enjoy playing airsoft and practicing archery. I'm also ranked third in Italy in outdoor archery rankings, and second in indoor rankings.</p>
-                    <a href="assets/docs/curriculum.pdf" class="btn" download>Download my CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="section" id="featured">
+            <div class="container">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Discover my latest applications and technical projects.</p>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>School Projects</h2>
-            <p>Here are some of the projects I've completed during the school year:</p>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="assets/img/sii-saggio-guida-sicuro.jpeg" alt="Drive Smart, Drive Safe">
-                    <h3>Project: Drive Smart, Drive Safe</h3>
-                    <p>
-                        This project uses artificial intelligence to predict high-risk areas for road accidents in Cava de' Tirreni, based on historical data from local police. 
-                        A neural network analyzes variables like weather conditions, road type and time of day, generating predicted coordinates. 
-                        Interactive maps (Folium) and OSRM service correct inaccuracies, displaying both actual and predicted accidents.
-                    </p>
-                    <a href="assets/docs/sii_saggio_guida_sicuro.pdf" class="btn" download>Download documentation</a>
-                </div>
-                
-                <div class="project-card">
-                    <img src="assets/img/rover.jpeg" alt="Roover project">
-                    <h3>Project: Roover</h3>
-                    <p>
-                        Educational robotics project based on Arduino Uno, creating a Bluetooth-controlled rover. 
-                        Equipped with sensors (RFID, ultrasound, light), actuators (motors, LEDs, buzzer) and LCD display, 
-                        the rover combines automation and security (RFID authentication). Developed in teams by 4th and 5th year classes, 
-                        it demonstrates skills in electronics and programming. The custom mobile app allows remote control.
-                    </p>
-                    <a href="assets/docs/roover.pdf" class="btn" download>Download documentation</a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-<section id="final-project" class="section highlight">
-    <div class="container">
-        <h2>Final Year Project</h2>
-        <div class="project-content">
-            <div class="project-img">
-                <img src="assets/img/ecms-dashboard.png" alt="ECMS Dashboard">
-            </div>
-            <div class="project-text">
-                <h3>Energy Consumption Monitoring System (ECMS)</h3>
-                <p>An innovative IoT system for intelligent monitoring of household energy consumption:</p>
-                
-                <div class="project-video">
-    <div class="project-video">
-    <h4>System Demonstration</h4>
-    <div class="video-wrapper">
-        <video controls autoplay muted playsinline loop class="ecms-demo">
-            <source src="assets/video/ecms-demo.mp4" type="video/mp4">
-        </video>
-    </div>
-</div>
-</div>
-                <!-- Contenuto esistente... -->
-                
-                <div class="project-links">
-                    <a href="assets/docs/progetto_ECMS.docx" class="btn" download>
-                        <i class="fas fa-file-pdf"></i> Full documentation
-                    </a>
-                    <a href="https://github.com/christianostoni/E.C.M.S" class="btn github-btn" target="_blank">
-                        <i class="fab fa-github"></i> Source code
-                    </a>
-                    <a href="canva-presentation.html" class="btn presentation-btn">
-                        <i class="fas fa-presentation-screen"></i> Interactive Presentation
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="experience" class="section">
-    <div class="container">
-        <h2>Professional Experience</h2>
-        
-        <div class="timeline">
-            <!-- Minervas -->
-            <div class="timeline-item">
-                <div class="timeline-date">Jul 2024 - Present</div>
-                <div class="timeline-content">
-                    <h3>Software Developer - Minervas</h3>
-                    <div class="job-location">Fisciano, Italy</div>
-                    <ul class="job-description">
-                        <li>
-                            <i class="fas fa-network-wired"></i>
-                            <strong>Automotive protocols:</strong> Developed solutions based on OBD2, CAN Bus and J1939 for industrial vehicles
-                        </li>
-                        <li>
-                            <i class="fas fa-robot"></i>
-                            <strong>IoT and MQTT:</strong> Implemented asynchronous communication systems with Python and multithreading
-                        </li>
-                        <li>
-                            <i class="fas fa-route"></i>
-                            <strong>Route optimization:</strong> Analyzed fleet routes with OSRM (Open Source Routing Machine)
-                        </li>
-                        <li>
-                            <i class="fas fa-gas-pump"></i>
-                            <strong>Data analysis:</strong> Processed telemetric data to improve fuel efficiency
-                        </li>
-                    </ul>
-                    <div class="tech-used">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">MQTT</span>
-                        <span class="tech-tag">OBD2</span>
-                        <span class="tech-tag">CAN Bus</span>
+                <div class="grid-2">
+                    <!-- Featured App: ArcoCheck -->
+                    <div class="glass-card">
+                        <div class="app-icon">
+                            <img src="assets/img/arcocheck-icon.png" alt="ArcoCheck App Icon"
+                                style="object-fit: contain; padding: 0;">
+                        </div>
+                        <div class="item-content">
+                            <h3>ArcoCheck</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">iOS</span>
+                                <span class="tech-tag">iPadOS</span>
+                                <span class="tech-tag">SwiftUI</span>
+                            </div>
+                            <p>L'app definitiva per gli arbitri di tiro con l'arco (FITARCO). Gestisci le gare Hunter &
+                                Field, verifica la conformità normativa e genera report PDF con firma autografa
+                                direttamente sul campo.</p>
+                            <div class="card-actions">
+                                <a href="apps/index.html" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Elettronica Pierri -->
-            <div class="timeline-item">
-                <div class="timeline-date">Apr 2024 - Jun 2024</div>
-                <div class="timeline-content">
-                    <h3>PLC Programmer - Elettronica Pierri</h3>
-                    <div class="job-location">Fisciano, Italy</div>
-                    <ul class="job-description">
-                        <li>
-                            <i class="fas fa-industry"></i>
-                            <strong>Industrial automation:</strong> Programmed Siemens PLCs (LOGO! and S7-1200) for production lines
-                        </li>
-                        <li>
-                            <i class="fas fa-jar"></i>
-                            <strong>Food sterilization:</strong> Developed control logic for 3kg sterilizer (tomato jars)
-                        </li>
-                        <li>
-                            <i class="fas fa-tank-water"></i>
-                            <strong>Continuous systems:</strong> Designed automation for processing tanks
-                        </li>
-                    </ul>
-                    <div class="tech-used">
-                        <span class="tech-tag">TIA Portal</span>
-                        <span class="tech-tag">Ladder Logic</span>
-                        <span class="tech-tag">S7-1200</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Anima-Time -->
-            <div class="timeline-item">
-                <div class="timeline-date">Jul 2023 - Aug 2023</div>
-                <div class="timeline-content">
-                    <h3>Archery Instructor - Anima-Time</h3>
-                    <div class="job-location">Calabria, Italy</div>
-                    <ul class="job-description">
-                        <li>
-                            <i class="fas fa-bullseye"></i>
-                            <strong>Training:</strong> Archery lessons for tourists of all ages
-                        </li>
-                        <li>
-                            <i class="fas fa-shield-alt"></i>
-                            <strong>Safety:</strong> Managed safety protocols and equipment maintenance
-                        </li>
-                        <li>
-                            <i class="fas fa-glass-cheers"></i>
-                            <strong>Entertainment:</strong> Organized recreational activities in tourist village
-                        </li>
-                    </ul>
-                    <div class="skills-used">
-                        <span class="skill-tag">Leadership</span>
-                        <span class="skill-tag">Communication</span>
-                        <span class="skill-tag">Group management</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- SETIS SAS -->
-            <div class="timeline-item">
-                <div class="timeline-date">Jun 2023</div>
-                <div class="timeline-content">
-                    <h3>Photovoltaic Installer - SETIS SAS</h3>
-                    <div class="job-location">Castel San Giorgio, Italy</div>
-                    <ul class="job-description">
-                        <li>
-                            <i class="fas fa-solar-panel"></i>
-                            <strong>Solar systems:</strong> Installation and maintenance of photovoltaic systems
-                        </li>
-                        <li>
+
+                    <!-- Featured Project: ECMS -->
+                    <div class="glass-card">
+                        <div class="app-icon"
+                            style="background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:2rem;">
                             <i class="fas fa-bolt"></i>
-                            <strong>Electrical:</strong> Learned basics of electrical systems
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="item-content">
+                            <h3>E.C.M.S.</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">Dashboard</span>
+                                <span class="tech-tag">Hardware</span>
+                            </div>
+                            <p>Energy Consumption Monitoring System. An innovative IoT system for intelligent monitoring
+                                of household energy consumption with real-time data visualization.</p>
+                            <div class="card-actions">
+                                <a href="projects/index.html" class="btn btn-secondary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-    <section id="contact" class="section">
-    <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> christianoston182@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +39 342 144 2116</p>
-                <div class="social-links">
-                    <a href="https://github.com/christianostoni" class="github" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://www.instagram.com/christian_ostoni?igsh=OGYwY2p3c3BoMDhn" class="instagram" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
+        <section class="section">
+            <div class="container">
+                <div class="glass-card about-grid">
+                    <img src="assets/img/profile.jpg" alt="Christian Ostoni" class="about-image">
+                    <div class="about-text">
+                        <h2 class="section-title" style="text-align: left;">About Me</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem;">
+                            Hello! I'm a passionate software developer strong focus on iOS development, electronics, and
+                            programming.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem;">
+                            Throughout my professional and personal journey, I have developed various skills connecting
+                            low-level hardware communication (CAN Bus, IoT) to intuitive mobile interfaces (SwiftUI).
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">
+                            Outside of coding, I'm highly active in sports: I play airsoft and practice archery at a
+                            competitive level, currently ranked 3rd in Italy for outdoor archery and 2nd for indoor
+                            rankings.
+                        </p>
+                        <a href="experience/index.html" class="btn btn-secondary">View Experience <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your message" required></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
-        </div>
-    </div>
-</section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2026 Christian Ostoni. All rights reserved.</p>
+            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://github.com/christianostoni" target="_blank"
+                    style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/christian_ostoni" target="_blank"
+                    style="color: var(--text-secondary); font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:christianostoni82@gmail.com" style="color: var(--text-secondary); font-size: 1.2rem;"><i
+                        class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
