@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Pharos</title>
+<meta name="description" content="Get help with Pharos — your AI learning companion app.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+  :root {
+    --gold: #F2C84B; --gold-deep: #C89010; --dark: #1E1006;
+    --text: #2E1A00; --muted: #7A6040; --cream: #FDFAF4;
+    --border: rgba(200,160,80,.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+  a { color: var(--gold-deep); }
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(253,250,244,.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 60px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: var(--dark); text-decoration: none; }
+  .mascot-mini {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: radial-gradient(circle at 38% 35%, #fffde0 0%, #f5d060 50%, #d4960a 85%);
+    box-shadow: 0 2px 8px rgba(212,150,10,.35); position: relative; flex-shrink: 0;
+  }
+  .mascot-mini::before { content: ''; position: absolute; top: 34%; left: 26%; width: 5px; height: 5px; background: #7a5500; border-radius: 50%; box-shadow: 10px 0 0 #7a5500; }
+  .mascot-mini::after { content: ''; position: absolute; bottom: 27%; left: 50%; transform: translateX(-50%); width: 14px; height: 6px; border-bottom: 2px solid #7a5500; border-radius: 0 0 8px 8px; }
+  .nav-back { font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--dark); }
+
+  .page-hero { padding: 64px 5% 48px; max-width: 760px; margin: 0 auto; border-bottom: 1px solid var(--border); }
+  .page-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; }
+  .page-title { font-size: 36px; font-weight: 700; letter-spacing: -.02em; color: var(--dark); margin-bottom: 10px; }
+  .page-sub { font-size: 16px; color: var(--muted); }
+
+  .content { max-width: 760px; margin: 0 auto; padding: 48px 5% 80px; }
+
+  /* CONTACT CARDS */
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 56px; }
+  .contact-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 16px;
+    padding: 28px 24px; text-align: center;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .contact-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.08); }
+  .contact-icon { font-size: 32px; margin-bottom: 14px; }
+  .contact-title { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+  .contact-body { font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+  .contact-link {
+    display: inline-block; background: var(--dark); color: #fff;
+    padding: 9px 20px; border-radius: 100px; font-size: 13px; font-weight: 600;
+    transition: opacity .2s;
+  }
+  .contact-link:hover { opacity: .85; color: #fff; }
+
+  /* FAQ */
+  .faq-section h2 { font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 24px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-q { font-size: 16px; font-weight: 600; color: var(--dark); margin-bottom: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+  .faq-q span { font-size: 20px; color: var(--gold-deep); }
+
+  /* STATUS */
+  .status-bar { background: #F0FAF0; border: 1px solid rgba(40,168,72,.2); border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+  .status-dot { width: 10px; height: 10px; border-radius: 50%; background: #28A848; box-shadow: 0 0 0 3px rgba(40,168,72,.2); flex-shrink: 0; }
+  .status-text { font-size: 14px; font-weight: 500; color: #1A5830; }
+
+  footer {
+    background: var(--dark); color: rgba(255,255,255,.6);
+    padding: 32px 5%; display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px;
+  }
+  footer a { color: rgba(255,255,255,.6); }
+  footer a:hover { color: #fff; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><div class="mascot-mini"></div>Pharos</a>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="page-eyebrow">Help Center</div>
+  <h1 class="page-title">We're here to help.</h1>
+  <p class="page-sub">Having trouble with Pharos? Check the FAQ below or reach out directly — we usually respond within 24 hours.</p>
+</div>
+
+<div class="content">
+
+  <!-- APP STATUS -->
+  <div class="status-bar">
+    <div class="status-dot"></div>
+    <div class="status-text">All systems operational — Pharos is running smoothly.</div>
+  </div>
+
+  <!-- CONTACT OPTIONS -->
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-title">Email Support</div>
+      <div class="contact-body">Send us an email and we'll get back to you within 24 hours, usually faster.</div>
+      <a href="mailto:ostonichris07@gmail.com" class="contact-link">ostonichris07@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">🐛</div>
+      <div class="contact-title">Report a Bug</div>
+      <div class="contact-body">Found something broken? Let us know with as much detail as possible — we take bugs seriously.</div>
+      <a href="mailto:ostonichris07@gmail.com?subject=Bug%20Report%20—%20Pharos" class="contact-link">Report a bug</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">💡</div>
+      <div class="contact-title">Feature Request</div>
+      <div class="contact-body">Have an idea that would make Pharos better? We'd love to hear it. Every message is read.</div>
+      <a href="mailto:ostonichris07@gmail.com?subject=Feature%20Request%20—%20Pharos" class="contact-link">Share your idea</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Is Pharos free to use? <span>+</span></div>
+      <div class="faq-a">Yes — Pharos is free to download and use. Your first learning path is generated at no cost. We may offer optional premium features in future updates, which will always be clearly labelled.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How does Pharos build my learning path? <span>+</span></div>
+      <div class="faq-a">When you first open Pharos, it asks you a series of questions — your goal, how much time you have each week, and your budget. It then uses AI to generate a structured, multi-phase plan with curated learning resources matched to your specific answers.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I change my learning goal after I've started? <span>+</span></div>
+      <div class="faq-a">Absolutely. Tap the Pharos companion button at any time and say "I want to talk about my path." Pharos can help you adjust your goal, change your pace, or start a new path entirely without losing what you've already done.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What is "Today's Pill"? <span>+</span></div>
+      <div class="faq-a">"Today's Pill" is a short, digestible piece of content or insight that Pharos surfaces each day — separate from your main learning task. It's designed to keep you inspired and informed without adding to your workload.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does Pharos work offline? <span>+</span></div>
+      <div class="faq-a">You can view your existing path and tasks offline. Generating a new path or chatting with the AI companion requires an internet connection, as these features use cloud AI services.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I delete my account and data? <span>+</span></div>
+      <div class="faq-a">You can delete your account and all associated data at any time from within the app: go to your Profile → Settings → Delete Account. Alternatively, email us at <a href="mailto:ostonichris07@gmail.com">ostonichris07@gmail.com</a> and we will process your request within 7 days.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">The app isn't loading. What should I do? <span>+</span></div>
+      <div class="faq-a">First, try closing and reopening the app. If the issue persists, try: (1) checking your internet connection, (2) restarting your iPhone, (3) updating the app to the latest version in the App Store. If none of these work, please email us at <a href="mailto:ostonichris07@gmail.com">ostonichris07@gmail.com</a> with your device model and iOS version.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is my data private? <span>+</span></div>
+      <div class="faq-a">Yes. Pharos does not sell your data and does not show ads. Your learning goals and personal information are used only to power your experience in the app. Read our full <a href="privacy.html">Privacy Policy</a> for details.</div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <span>© 2025 Pharos. All rights reserved.</span>
+  <div style="display:flex;gap:20px">
+    <a href="index.html">Home</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
