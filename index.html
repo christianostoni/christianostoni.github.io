@@ -4,9 +4,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Ostoni - iOS Developer</title>
+    <title>Christian Ostoni — iOS & Systems Developer</title>
+    <meta name="description" content="iOS Developer and Systems Engineer specializing in SwiftUI, visionOS, IoT, and embedded systems. Based in Italy. Open to new opportunities.">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .available-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(40, 168, 72, 0.12);
+            border: 1px solid rgba(40, 168, 72, 0.35);
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4ade80;
+            letter-spacing: 0.03em;
+            margin-bottom: 28px;
+            animation: fadeIn 1s ease forwards;
+        }
+        .available-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25);
+            animation: pulse-green 2s ease-in-out infinite;
+        }
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25); }
+            50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.1); }
+        }
+        .skills-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+            animation: fadeInUp 1s ease 0.8s forwards;
+            opacity: 0;
+        }
+        .skill-pill {
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 99px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.01em;
+        }
+        .featured-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: rgba(10, 132, 255, 0.15);
+            border: 1px solid rgba(10, 132, 255, 0.3);
+            border-radius: 99px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .contact-strip {
+            background: rgba(255,255,255,0.03);
+            border-top: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--card-border);
+            padding: 48px 0;
+            text-align: center;
+        }
+        .contact-strip h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.03em;
+        }
+        .contact-strip p {
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,23 +106,63 @@
 
     <main>
         <section class="hero">
-            <h1><span class="text-gradient">Designing code.</span><br>Building experiences.</h1>
-            <p>I'm Christian Ostoni, an iOS Developer & Software Engineer passionate about creating intuitive,
-                high-performance applications and connected systems.</p>
+            <div class="available-badge">
+                <div class="available-dot"></div>
+                Open to new opportunities
+            </div>
+            <h1><span class="text-gradient">iOS & Systems</span><br>Developer.</h1>
+            <p>I build native iOS and visionOS apps, connected IoT systems, and embedded firmware — from SwiftUI interfaces to industrial automation backends.</p>
             <div class="hero-cta">
-                <a href="apps/index.html" class="btn btn-accent"><i class="fab fa-apple"></i> View iOS Apps</a>
-                <a href="assets/docs/curriculum.pdf" class="btn btn-secondary" download><i
-                        class="fas fa-arrow-down"></i> Resume</a>
+                <a href="mailto:christianostoni82@gmail.com" class="btn btn-accent"><i class="fas fa-envelope"></i> Get in Touch</a>
+                <a href="apps/index.html" class="btn btn-secondary"><i class="fab fa-apple"></i> View iOS Apps</a>
+                <a href="assets/docs/curriculum.pdf" class="btn btn-secondary" download><i class="fas fa-arrow-down"></i> Resume</a>
+            </div>
+            <div class="skills-strip">
+                <span class="skill-pill">Swift</span>
+                <span class="skill-pill">SwiftUI</span>
+                <span class="skill-pill">visionOS</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">MQTT / IoT</span>
+                <span class="skill-pill">Embedded Systems</span>
+                <span class="skill-pill">PLC / Modbus</span>
+                <span class="skill-pill">CAN Bus / OBD2</span>
             </div>
         </section>
 
         <section class="section" id="featured">
             <div class="container">
                 <h2 class="section-title">Featured Work</h2>
-                <p class="section-subtitle">Discover my latest applications and technical projects.</p>
+                <p class="section-subtitle">End-to-end projects spanning native apps, spatial computing, and industrial IoT.</p>
 
                 <div class="grid-2">
-                    <!-- Featured App: ArcoCheck -->
+                    <!-- SiMiProject — Star Project -->
+                    <div class="glass-card">
+                        <div class="featured-badge"><i class="fas fa-star"></i> Star Project</div>
+                        <div class="app-icon"
+                            style="background: linear-gradient(135deg, #0a84ff 0%, #5ac8fa 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:2rem;">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="item-content">
+                            <h3>SiMi — Industrial IoT Platform</h3>
+                            <div class="tech-stack">
+                                <span class="tech-tag">iOS</span>
+                                <span class="tech-tag">visionOS</span>
+                                <span class="tech-tag">SwiftUI</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">MQTT</span>
+                                <span class="tech-tag">Modbus</span>
+                            </div>
+                            <p>Retrofit platform for Siemens LOGO! 8 PLCs — connects legacy industrial machines to iPhone, iPad and Apple Vision Pro via TLS-encrypted MQTT, with no changes to existing PLC logic.</p>
+                            <div class="card-actions">
+                                <a href="https://github.com/christianostoni/SiMiProject" class="btn btn-accent" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                                <a href="projects/index.html" class="btn btn-secondary">Full Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ArcoCheck -->
                     <div class="glass-card">
                         <img src="assets/img/arcocheck-icon.png" alt="ArcoCheck App Icon" class="app-icon"
                             style="object-fit: cover; display: block; background-color: white;">
@@ -52,10 +172,9 @@
                                 <span class="tech-tag">iOS</span>
                                 <span class="tech-tag">iPadOS</span>
                                 <span class="tech-tag">SwiftUI</span>
+                                <span class="tech-tag">PDFKit</span>
                             </div>
-                            <p>L'app definitiva per gli arbitri di tiro con l'arco (FITARCO). Gestisci le gare Hunter &
-                                Field, verifica la conformità normativa e genera report PDF con firma autografa
-                                direttamente sul campo.</p>
+                            <p>Production App Store app for FITARCO archery referees. Field compliance checks, automatic normative validation, and PDF reports with handwritten signature — offline-ready.</p>
                             <div class="card-actions">
                                 <a href="https://apps.apple.com/it/app/arcocheck/id6760252886?l=en-GB" target="_blank"
                                     class="btn btn-accent"><i class="fab fa-apple"></i> App Store</a>
@@ -64,27 +183,7 @@
                         </div>
                     </div>
 
-                    <!-- Featured App: TacPoint -->
-                    <div class="glass-card">
-                        <img src="assets/img/tacpoint-icon.jpg" alt="TacPoint App Icon" class="app-icon"
-                            style="object-fit: cover; display: block; border-radius: 25px;">
-                        <div class="item-content">
-                            <h3>TacPoint</h3>
-                            <div class="tech-stack">
-                                <span class="tech-tag">iOS</span>
-                                <span class="tech-tag">iPadOS</span>
-                                <span class="tech-tag">SwiftUI</span>
-                            </div>
-                            <p>Tactical Softair Manager. L'app definitiva per la gestione dei tornei e delle simulazioni
-                                militari. Presenta funzionalità per Pattuglia Incursori e Quartier Generale, con QR
-                                scanning, validazione GPS e debriefing crittografato.</p>
-                            <div class="card-actions">
-                                <a href="apps/index.html" class="btn btn-secondary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Featured App: Pharos -->
+                    <!-- Pharos -->
                     <div class="glass-card">
                         <img src="assets/img/pharos-icon.png" alt="Pharos App Icon" class="app-icon"
                             style="object-fit: cover; display: block; border-radius: 25px;">
@@ -95,7 +194,7 @@
                                 <span class="tech-tag">SwiftUI</span>
                                 <span class="tech-tag">AI</span>
                             </div>
-                            <p>Your AI Learning Companion. Digli il tuo obiettivo di carriera e ottieni una roadmap passo dopo passo, calibrata sul tuo tempo e budget — con un compagno AI sempre al tuo fianco.</p>
+                            <p>AI-powered learning companion. Generates a personalized, step-by-step career roadmap based on your goals, available time, and budget — with daily tasks and adaptive re-routing.</p>
                             <div class="card-actions">
                                 <a href="apps/pharos/pharos-index.html" class="btn btn-accent"><i class="fab fa-apple"></i> App Store</a>
                                 <a href="apps/index.html" class="btn btn-secondary">Learn More</a>
@@ -103,7 +202,7 @@
                         </div>
                     </div>
 
-                    <!-- Featured Project: ECMS -->
+                    <!-- ECMS -->
                     <div class="glass-card">
                         <div class="app-icon"
                             style="background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); display:flex; align-items:center; justify-content:center; color:white; font-size:2rem;">
@@ -113,11 +212,11 @@
                             <h3>E.C.M.S.</h3>
                             <div class="tech-stack">
                                 <span class="tech-tag">IoT</span>
-                                <span class="tech-tag">Dashboard</span>
+                                <span class="tech-tag">C++</span>
                                 <span class="tech-tag">Hardware</span>
+                                <span class="tech-tag">Dashboard</span>
                             </div>
-                            <p>Energy Consumption Monitoring System. An innovative IoT system for intelligent monitoring
-                                of household energy consumption with real-time data visualization.</p>
+                            <p>Energy Consumption Monitoring System — IoT solution for real-time household energy tracking with historical analysis and predictive insights via a custom hardware-dashboard stack.</p>
                             <div class="card-actions">
                                 <a href="projects/index.html" class="btn btn-secondary">Learn More</a>
                             </div>
@@ -127,6 +226,18 @@
             </div>
         </section>
 
+        <!-- Contact Strip -->
+        <div class="contact-strip">
+            <div class="container">
+                <h2>Available for iOS & systems roles.</h2>
+                <p>Looking for a developer who ships end-to-end — from SwiftUI to firmware? Let's talk.</p>
+                <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                    <a href="mailto:christianostoni82@gmail.com" class="btn btn-accent"><i class="fas fa-envelope"></i> christianostoni82@gmail.com</a>
+                    <a href="https://github.com/christianostoni" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+        </div>
+
         <section class="section">
             <div class="container">
                 <div class="glass-card about-grid">
@@ -134,17 +245,13 @@
                     <div class="about-text">
                         <h2 class="section-title" style="text-align: left;">About Me</h2>
                         <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem;">
-                            Hello! I'm a passionate software developer strong focus on iOS development, electronics, and
-                            programming.
+                            I'm a software developer with a strong focus on iOS and systems engineering. My work spans SwiftUI interfaces for iPhone, iPad and Apple Vision Pro, Python/MQTT IoT backends, and C++ embedded firmware — giving me an end-to-end view from hardware to UX.
                         </p>
                         <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem;">
-                            Throughout my professional and personal journey, I have developed various skills connecting
-                            low-level hardware communication (CAN Bus, IoT) to intuitive mobile interfaces (SwiftUI).
+                            Currently a developer at Minervas (automotive IoT — OBD2, CAN Bus, J1939) and a second-year student at the Apple Developer Academy. Previously a PLC programmer at Elettronica Pierri working on Siemens industrial automation.
                         </p>
                         <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">
-                            Outside of coding, I'm highly active in sports: I play airsoft and practice archery at a
-                            competitive level, currently ranked 3rd in Italy for outdoor archery and 2nd for indoor
-                            rankings.
+                            Outside of coding I practice competitive archery — currently ranked 3rd in Italy (outdoor) and 2nd (indoor) — and play airsoft.
                         </p>
                         <a href="experience/index.html" class="btn btn-secondary">View Experience <i
                                 class="fas fa-arrow-right"></i></a>

@@ -26,10 +26,83 @@
 
     <main style="padding-top: 120px; min-height: 80vh;">
         <div class="container">
-            <h1 class="section-title">Projects showcase</h1>
-            <p class="section-subtitle">A collection of hardware and software engineering projects.</p>
+            <h1 class="section-title">Projects</h1>
+            <p class="section-subtitle">End-to-end engineering — native apps, IoT platforms, and embedded systems.</p>
 
             <div class="grid-2">
+                <!-- Project: SiMiProject -->
+                <div class="glass-card" style="grid-column: 1 / -1;">
+                    <div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <div style="display:inline-flex; align-items:center; gap:6px; padding:4px 10px; background:rgba(10,132,255,0.15); border:1px solid rgba(10,132,255,0.3); border-radius:99px; font-size:0.72rem; font-weight:700; color:var(--accent-color); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;">
+                                <i class="fas fa-star"></i> Star Project · Apple Developer Academy
+                            </div>
+                            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">SiMi</h2>
+                            <h3 style="color: var(--text-secondary); font-weight: 400; font-size: 1.2rem; margin-bottom: 20px;">
+                                Industrial IoT Platform — iOS, visionOS & Embedded
+                            </h3>
+
+                            <div class="tech-stack">
+                                <span class="tech-tag">Swift</span>
+                                <span class="tech-tag">SwiftUI</span>
+                                <span class="tech-tag">visionOS</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">MQTT / TLS</span>
+                                <span class="tech-tag">Modbus TCP</span>
+                                <span class="tech-tag">ESP8266</span>
+                                <span class="tech-tag">Raspberry Pi</span>
+                                <span class="tech-tag">Siemens LOGO! 8</span>
+                            </div>
+
+                            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+                                SiMi is a full-stack IoT retrofit platform that connects legacy Siemens LOGO! 8 PLCs to Apple devices in real time — without modifying a single line of existing PLC logic. The system bridges an ESP8266 Modbus gateway through a Raspberry Pi async backend to native iPhone, iPad and Apple Vision Pro apps, all secured with TLS-encrypted MQTT.
+                            </p>
+
+                            <ul class="features-list">
+                                <li><i class="fas fa-mobile-alt"></i>
+                                    <div><strong>Native iOS & visionOS apps:</strong> Real-time machine state visualization with alarm banners and live output indicators. The visionOS version enables spatial computing on Apple Vision Pro with floating window layouts.</div>
+                                </li>
+                                <li><i class="fas fa-microchip"></i>
+                                    <div><strong>Custom ESP8266 firmware (C++):</strong> Edge gateway translates PLC Modbus TCP registers into MQTT messages, forwarding live industrial data to the cloud broker.</div>
+                                </li>
+                                <li><i class="fas fa-server"></i>
+                                    <div><strong>Python async backend (Raspberry Pi):</strong> Concurrent coroutines handle machine polling, WebSocket bridging and MQTT routing with exponential-backoff reconnection.</div>
+                                </li>
+                                <li><i class="fas fa-lock"></i>
+                                    <div><strong>Custom Swift Package — LogoLink:</strong> MQTT abstraction layer wrapping CocoaMQTT with TLS end-to-end encryption and resilient reconnection logic.</div>
+                                </li>
+                            </ul>
+
+                            <div class="card-actions" style="margin-top: 30px;">
+                                <a href="https://github.com/christianostoni/SiMiProject" target="_blank"
+                                    class="btn btn-accent"><i class="fab fa-github"></i> View on GitHub</a>
+                            </div>
+                        </div>
+
+                        <div style="flex-shrink: 0; display: flex; flex-direction: column; gap: 12px; min-width: 200px;">
+                            <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px 24px;">
+                                <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 10px;">Stack breakdown</div>
+                                <div style="display:flex; flex-direction:column; gap:8px; font-size:0.85rem; color:var(--text-secondary);">
+                                    <div><span style="color:var(--text-primary); font-weight:600;">Swift</span> · 66%</div>
+                                    <div><span style="color:var(--text-primary); font-weight:600;">C++</span> · 15%</div>
+                                    <div><span style="color:var(--text-primary); font-weight:600;">Python</span> · 15%</div>
+                                    <div><span style="color:var(--text-primary); font-weight:600;">C</span> · 4%</div>
+                                </div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--card-border); border-radius: 16px; padding: 20px 24px;">
+                                <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 10px;">Targets</div>
+                                <div style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; color:var(--text-secondary);">
+                                    <div><i class="fab fa-apple" style="color:var(--text-primary); width:16px;"></i> iPhone / iPad</div>
+                                    <div><i class="fas fa-vr-cardboard" style="color:var(--text-primary); width:16px;"></i> Apple Vision Pro</div>
+                                    <div><i class="fas fa-microchip" style="color:var(--text-primary); width:16px;"></i> ESP8266</div>
+                                    <div><i class="fas fa-server" style="color:var(--text-primary); width:16px;"></i> Raspberry Pi</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project: ECMS -->
                 <div class="glass-card">
                     <img src="../assets/img/ecms-dashboard.png" alt="ECMS Dashboard" class="item-image">
